@@ -59,10 +59,14 @@
             <form>
                 <fieldset id="tipo_suscripcion">
                 <legend>Tipo de suscripcion:</legend>
-                    <input type="checkbox" name="suscripciones[]" value="noticias">
-                    <input type="checkbox" name="suscripciones[]" value="promociones">
-                    <input type="checkbox" name="suscripciones[]" value="alertas">
-                    <input type="checkbox" name="suscripciones[]" value="eventos">
+                    <input type="checkbox" id="noticias" name="suscripciones[]" value="noticias">
+                    <label for="noticias">Noticias</label>
+                    <input type="checkbox" id="promociones" name="suscripciones[]" value="promociones">
+                    <label for="promociones">Promociones</label>
+                    <input type="checkbox" id="alertas" name="suscripciones[]" value="alertas">
+                    <label for="alertas">Alertas</label>
+                    <input type="checkbox" id="eventos" name="suscripciones[]" value="eventos">
+                    <label for="eventos">Eventos</label>
 
                 </fieldset>
                 <button type="submit">Cargar</button>
@@ -94,6 +98,7 @@
         </body>
 
         </html>
+
 
 
 
