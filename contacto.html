@@ -1,105 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" type="text/css"
-        href="styles/styles.css" media="screen">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" media="screen">
 </head>
 <body>
+
 <header class="contendor_header">
   <a href="index.html" id="volver">← Volver atrás</a>
   <h1>Contacto:</h1>
 </header>
-  
 
 <div id="contenedor_contacto">
+
+  <!--  Datos personales -->
   <div id="form_1">
-    <form>
-            <label for="nombre">Nombre (requerido):</label>
-            <input id="nombre" name="nombre" type="text"  maxlength="20" required>
-                <label for="apellido">Apellido :</label>
-            <input id="apellido" name="apellido" type="text"  maxlength="20">
-            <label for="email">Email (requerido):</label>
-            <input id="email" name="email" type="email" required>
-                <label for="telefono">Teléfono:</label>
-            <input id="telefono" name="telefono" type="tel" placeholder="Ingrese su teléfono" autocomplete="tel">
-                <label for="edad">Edad:</label>
-            <input id="edad" name="edad" type="number" min="16" max="120" step="1" inputmode="numeric">
-                <label for="direccion">Dirección:</label>
-            <textarea id="direccion" name="direccion"></textarea>
-            <label for="provincia">Provincia:</label>
-            <input id="provincia" name="provincia" type="text" list="provincias">
-            <datalist id="provincias">
-        <option value="Neuquen"></option>
-        <option value="Rio Negro"></option>
-        <option value="Chubut"></option>
-        <option value="Santa Cruz"></option>
-        <option value="Tierra del Fuego"></option>
-        </datalist>
-            <label for="cp">Código Postal:</label>
-            <input id="cp" name="codigo_postal" type="text"  pattern="^[A-Za-z]\d{4}[A-Za-z]{3}$" placeholder="A1234ABC"
-                minlength="8"
-                maxlength="8">
-             </form>
-            <form>
-                </div>
-                <fieldset id="met_preferido_contacto">
-                    <legend>Metodo Preferido de contacto:</legend>
-                <input type="radio" id="correo_electronico" name="met_contacto" value="correo_electronico" checked>
-                <label for="correo_electronico">correo electronico</label>
-                <input type="radio" id="correo_postal" name="met_contacto" value="correo_postal">
-                <label for="correo_postal">Correo postal</label>
-                <input type="radio" id="met_contacto" name="met_contacto" value="telefono">
-                <label for="met_contacto">Telefono</label>
-                </fieldset>
-            </form>
+    <form id="form_datos">
+      <label for="nombre">Nombre (requerido):</label>
+      <input id="nombre" name="nombre" type="text" maxlength="20" required>
 
-            <form>
-                <fieldset id="tipo_suscripcion">
-                <legend>Tipo de suscripcion:</legend>
-                    <input type="checkbox" id="noticias" name="suscripciones[]" value="noticias">
-                    <label for="noticias">Noticias</label>
-                    <input type="checkbox" id="promociones" name="suscripciones[]" value="promociones">
-                    <label for="promociones">Promociones</label>
-                    <input type="checkbox" id="alertas" name="suscripciones[]" value="alertas" checked>
-                    <label for="alertas">Alertas</label>
-                    <input type="checkbox" id="eventos" name="suscripciones[]" value="eventos">
-                    <label for="eventos">Eventos</label>
+      <label for="apellido">Apellido:</label>
+      <input id="apellido" name="apellido" type="text" maxlength="20">
 
-                </fieldset>
-                <button type="submit">Cargar</button>
-            </form>
+      <label for="email">Email (requerido):</label>
+      <input id="email" name="email" type="email" required>
 
-        <table>
-            <thead>
-            <tr>
-                <th>Campo</th>
-                <th>Valor</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr><td>Nombre</td><td></td></tr>
-            <tr><td>Apellido</td><td></td></tr>
-            <tr><td>Email</td><td></td></tr>
-            <tr><td>Teléfono</td><td></td></tr>
-            <tr><td>Edad</td><td></td></tr>
-            <tr><td>Dirección</td><td></td></tr>
-            <tr><td>Provincia</td><td></td></tr>
-            <tr><td>Código Postal</td><td></td></tr>
-            <tr><td>Método preferido de contacto</td><td></td></tr>
-            <tr><td>Tipo de suscripción</td><td></td></tr>
-            </tbody>
-        </table>
+      <label for="telefono">Teléfono:</label>
+      <input id="telefono" name="telefono" type="tel" placeholder="Ingrese su teléfono" autocomplete="tel">
 
+      <label for="edad">Edad:</label>
+      <input id="edad" name="edad" type="number" min="16" max="120" step="1" inputmode="numeric">
 
-        </div>
-       </body>
-    </html>
+      <label for="direccion">Dirección:</label>
+      <textarea id="direccion" name="direccion"></textarea>
 
+      <label for="provincia">Provincia:</label>
+      <input id="provincia" name="provincia" type="text" list="provincias">
+      <datalist id="provincias">
+        <option value="Neuquen">
+        <option value="Rio Negro">
+        <option value="Chubut">
+        <option value="Santa Cruz">
+        <option value="Tierra del Fuego">
+      </datalist>
 
+      <label for="cp">Código Postal:</label>
+      <input id="cp" name="codigo_postal" type="text"
+             pattern="^[A-Za-z]\d{4}[A-Za-z]{3}$"
+             placeholder="A1234ABC"
+             minlength="8" maxlength="8">
+    </form>
+  </div>
 
+  <!--  Método de contacto -->
+  <form id="form_contacto">
+    <fieldset id="met_preferido_contacto">
+      <legend>Método Preferido de contacto:</legend>
+
+      <input type="radio" id="correo_electronico" name="met_contacto" value="correo_electronico" checked>
+      <label for="correo_electronico">Correo electrónico</label>
+
+      <input type="radio" id="correo_postal" name="met_contacto" value="correo_postal">
+      <label for="correo_postal">Correo postal</label>
+
+      <input type="radio" id="contacto_telefono" name="met_contacto" value="telefono">
+      <label for="contacto_telefono">Teléfono</label>
+    </fieldset>
+  </form>
+
+  <!--  Suscripciones -->
+  <form id="form_suscripciones">
+    <fieldset id="tipo_suscripcion">
+      <legend>Tipo de suscripción:</legend>
+
+      <input type="checkbox" id="noticias" name="suscripciones[]" value="noticias">
+      <label for="noticias">Noticias</label>
+
+      <input type="checkbox" id="promociones" name="suscripciones[]" value="promociones">
+      <label for="promociones">Promociones</label>
+
+      <input type="checkbox" id="alertas" name="suscripciones[]" value="alertas" checked>
+      <label for="alertas">Alertas</label>
+
+      <input type="checkbox" id="eventos" name="suscripciones[]" value="eventos">
+      <label for="eventos">Eventos</label>
+    </fieldset>
+
+    <button type="submit">Cargar</button>
+  </form>
+
+  <!-- TABLA -->
+  <table>
+    <thead>
+      <tr>
+        <th>Campo</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Nombre</td><td></td></tr>
+      <tr><td>Apellido</td><td></td></tr>
+      <tr><td>Email</td><td></td></tr>
+      <tr><td>Teléfono</td><td></td></tr>
+      <tr><td>Edad</td><td></td></tr>
+      <tr><td>Dirección</td><td></td></tr>
+      <tr><td>Provincia</td><td></td></tr>
+      <tr><td>Código Postal</td><td></td></tr>
+      <tr><td>Método preferido de contacto</td><td></td></tr>
+      <tr><td>Tipo de suscripción</td><td></td></tr>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>
 
 
 
